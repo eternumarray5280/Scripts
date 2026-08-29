@@ -1,0 +1,275 @@
+#
+# /etc/fstab
+# Created by anaconda on Sat Apr 11 19:37:41 2026
+#
+# Accessible filesystems, by reference, are maintained under '/dev/disk/'.
+# See man pages fstab(5), findfs(8), mount(8) and/or blkid(8) for more info.
+#
+# After editing this file, run 'systemctl daemon-reload' to update systemd
+# units generated from this file.
+#
+UUID=b9b6a1ab-f8c3-43e1-80d2-39cd4e9360e9 /                       btrfs   subvol=root,compress=zstd:1 0 0
+UUID=c73f9a6f-ae6d-4d39-ad0b-ad6f8a810825 /boot                   ext4    defaults        1 2
+UUID=DBD2-331B          /boot/efi               vfat    umask=0077,shortname=winnt 0 2
+UUID=b9b6a1ab-f8c3-43e1-80d2-39cd4e9360e9 /home                   btrfs   subvol=home,compress=zstd:1 0 0
+
+#######
+10.0.0.9:/mnt/ssd/Handbreak       /mnt/handbreak nfs defaults,_netdev 0 0
+10.0.0.9:/mnt/nVME/apps/app-share       /mnt/app-share nfs defaults,_netdev 0 0
+#######
+10.0.0.9:/mnt/ssd/vm_data       /mnt/ssd nfs defaults,_netdev 0 0
+10.0.0.9:/mnt/nVME/4k       /mnt/4k nfs  defaults,_netdev  0  0
+10.0.0.9:/mnt/hdd/nfs       /mnt/hdd nfs  defaults,_netdev  0  0
+/dev/disk/by-uuid/0e15f735-facc-40a3-9453-fa1bd9856c47 /mnt/0e15f735-facc-40a3-9453-fa1bd9856c47 auto nosuid,nodev,nofail,x-gvfs-show 0 0
+#/dev/disk/by-uuid/9777f1da-d369-482b-b3dd-398c50c46dc7 /mnt/9777f1da-d369-482b-b3dd-398c50c46dc7 auto nosuid,nodev,nofail,x-gvfs-show 0 0
+#/dev/disk/by-uuid/af80e05a-a611-46fd-8873-1e6712e20fe7 /mnt/af80e05a-a611-46fd-8873-1e6712e20fe7 auto nosuid,nodev,nofail,x-gvfs-show 0 0
+#
+# /etc/fstab
+# Created by anaconda on Sat Apr 11 19:37:41 2026
+#
+# Accessible filesystems, by reference, are maintained under '/dev/disk/'.
+# See man pages fstab(5), findfs(8), mount(8) and/or blkid(8) for more info.
+#
+# After editing this file, run 'systemctl daemon-reload' to update systemd
+# units generated from this file.
+#
+UUID=b9b6a1ab-f8c3-43e1-80d2-39cd4e9360e9 /                       btrfs   subvol=root,compress=zstd:1 0 0
+UUID=c73f9a6f-ae6d-4d39-ad0b-ad6f8a810825 /boot                   ext4    defaults        1 2
+UUID=DBD2-331B          /boot/efi               vfat    umask=0077,shortname=winnt 0 2
+UUID=b9b6a1ab-f8c3-43e1-80d2-39cd4e9360e9 /home                   btrfs   subvol=home,compress=zstd:1 0 0
+
+#######
+10.0.0.9:/mnt/ssd/Handbreak       /mnt/handbreak nfs defaults,_netdev 0 0
+10.0.0.9:/mnt/nVME/apps/app-share       /mnt/app-share nfs defaults,_netdev 0 0
+#######
+10.0.0.9:/mnt/ssd/vm_data       /mnt/ssd nfs defaults,_netdev 0 0
+10.0.0.9:/mnt/nVME/4k       /mnt/4k nfs  defaults,_netdev  0  0
+10.0.0.9:/mnt/hdd/nfs       /mnt/hdd nfs  defaults,_netdev  0  0
+/dev/disk/by-uuid/0e15f735-facc-40a3-9453-fa1bd9856c47 /mnt/0e15f735-facc-40a3-9453-fa1bd9856c47 auto nosuid,nodev,nofail,x-gvfs-show 0 0
+#/dev/disk/by-uuid/9777f1da-d369-482b-b3dd-398c50c46dc7 /mnt/9777f1da-d369-482b-b3dd-398c50c46dc7 auto nosuid,nodev,nofail,x-gvfs-show 0 0
+#/dev/disk/by-uuid/af80e05a-a611-46fd-8873-1e6712e20fe7 /mnt/af80e05a-a611-46fd-8873-1e6712e20fe7 auto nosuid,nodev,nofail,x-gvfs-show 0 0
+#
+# /etc/fstab
+# Created by anaconda on Sat Apr 11 19:37:41 2026
+#
+# Accessible filesystems, by reference, are maintained under '/dev/disk/'.
+# See man pages fstab(5), findfs(8), mount(8) and/or blkid(8) for more info.
+#
+# After editing this file, run 'systemctl daemon-reload' to update systemd
+# units generated from this file.
+#
+UUID=b9b6a1ab-f8c3-43e1-80d2-39cd4e9360e9 /                       btrfs   subvol=root,compress=zstd:1 0 0
+UUID=c73f9a6f-ae6d-4d39-ad0b-ad6f8a810825 /boot                   ext4    defaults        1 2
+UUID=DBD2-331B          /boot/efi               vfat    umask=0077,shortname=winnt 0 2
+UUID=b9b6a1ab-f8c3-43e1-80d2-39cd4e9360e9 /home                   btrfs   subvol=home,compress=zstd:1 0 0
+
+#######
+10.0.0.9:/mnt/ssd/Handbreak       /mnt/handbreak nfs defaults,_netdev 0 0
+10.0.0.9:/mnt/nVME/apps/app-share       /mnt/app-share nfs defaults,_netdev 0 0
+#######
+10.0.0.9:/mnt/ssd/vm_data       /mnt/ssd nfs defaults,_netdev 0 0
+10.0.0.9:/mnt/nVME/4k       /mnt/4k nfs  defaults,_netdev  0  0
+10.0.0.9:/mnt/hdd/nfs       /mnt/hdd nfs  defaults,_netdev  0  0
+/dev/disk/by-uuid/0e15f735-facc-40a3-9453-fa1bd9856c47 /mnt/0e15f735-facc-40a3-9453-fa1bd9856c47 auto nosuid,nodev,nofail,x-gvfs-show 0 0
+#/dev/disk/by-uuid/9777f1da-d369-482b-b3dd-398c50c46dc7 /mnt/9777f1da-d369-482b-b3dd-398c50c46dc7 auto nosuid,nodev,nofail,x-gvfs-show 0 0
+#/dev/disk/by-uuid/af80e05a-a611-46fd-8873-1e6712e20fe7 /mnt/af80e05a-a611-46fd-8873-1e6712e20fe7 auto nosuid,nodev,nofail,x-gvfs-show 0 0
+#
+# /etc/fstab
+# Created by anaconda on Sat Apr 11 19:37:41 2026
+#
+# Accessible filesystems, by reference, are maintained under '/dev/disk/'.
+# See man pages fstab(5), findfs(8), mount(8) and/or blkid(8) for more info.
+#
+# After editing this file, run 'systemctl daemon-reload' to update systemd
+# units generated from this file.
+#
+UUID=b9b6a1ab-f8c3-43e1-80d2-39cd4e9360e9 /                       btrfs   subvol=root,compress=zstd:1 0 0
+UUID=c73f9a6f-ae6d-4d39-ad0b-ad6f8a810825 /boot                   ext4    defaults        1 2
+UUID=DBD2-331B          /boot/efi               vfat    umask=0077,shortname=winnt 0 2
+UUID=b9b6a1ab-f8c3-43e1-80d2-39cd4e9360e9 /home                   btrfs   subvol=home,compress=zstd:1 0 0
+
+#######
+10.0.0.9:/mnt/ssd/Handbreak       /mnt/handbreak nfs defaults,_netdev 0 0
+10.0.0.9:/mnt/nVME/apps/app-share       /mnt/app-share nfs defaults,_netdev 0 0
+#######
+10.0.0.9:/mnt/ssd/vm_data       /mnt/ssd nfs defaults,_netdev 0 0
+10.0.0.9:/mnt/nVME/4k       /mnt/4k nfs  defaults,_netdev  0  0
+10.0.0.9:/mnt/hdd/nfs       /mnt/hdd nfs  defaults,_netdev  0  0
+/dev/disk/by-uuid/0e15f735-facc-40a3-9453-fa1bd9856c47 /mnt/0e15f735-facc-40a3-9453-fa1bd9856c47 auto nosuid,nodev,nofail,x-gvfs-show 0 0
+#/dev/disk/by-uuid/9777f1da-d369-482b-b3dd-398c50c46dc7 /mnt/9777f1da-d369-482b-b3dd-398c50c46dc7 auto nosuid,nodev,nofail,x-gvfs-show 0 0
+#/dev/disk/by-uuid/af80e05a-a611-46fd-8873-1e6712e20fe7 /mnt/af80e05a-a611-46fd-8873-1e6712e20fe7 auto nosuid,nodev,nofail,x-gvfs-show 0 0
+#
+# /etc/fstab
+# Created by anaconda on Sat Apr 11 19:37:41 2026
+#
+# Accessible filesystems, by reference, are maintained under '/dev/disk/'.
+# See man pages fstab(5), findfs(8), mount(8) and/or blkid(8) for more info.
+#
+# After editing this file, run 'systemctl daemon-reload' to update systemd
+# units generated from this file.
+#
+UUID=b9b6a1ab-f8c3-43e1-80d2-39cd4e9360e9 /                       btrfs   subvol=root,compress=zstd:1 0 0
+UUID=c73f9a6f-ae6d-4d39-ad0b-ad6f8a810825 /boot                   ext4    defaults        1 2
+UUID=DBD2-331B          /boot/efi               vfat    umask=0077,shortname=winnt 0 2
+UUID=b9b6a1ab-f8c3-43e1-80d2-39cd4e9360e9 /home                   btrfs   subvol=home,compress=zstd:1 0 0
+
+#######
+10.0.0.9:/mnt/ssd/Handbreak       /mnt/handbreak nfs defaults,_netdev 0 0
+10.0.0.9:/mnt/nVME/apps/app-share       /mnt/app-share nfs defaults,_netdev 0 0
+#######
+10.0.0.9:/mnt/ssd/vm_data       /mnt/ssd nfs defaults,_netdev 0 0
+10.0.0.9:/mnt/nVME/4k       /mnt/4k nfs  defaults,_netdev  0  0
+10.0.0.9:/mnt/hdd/nfs       /mnt/hdd nfs  defaults,_netdev  0  0
+/dev/disk/by-uuid/0e15f735-facc-40a3-9453-fa1bd9856c47 /mnt/0e15f735-facc-40a3-9453-fa1bd9856c47 auto nosuid,nodev,nofail,x-gvfs-show 0 0
+#/dev/disk/by-uuid/9777f1da-d369-482b-b3dd-398c50c46dc7 /mnt/9777f1da-d369-482b-b3dd-398c50c46dc7 auto nosuid,nodev,nofail,x-gvfs-show 0 0
+#/dev/disk/by-uuid/af80e05a-a611-46fd-8873-1e6712e20fe7 /mnt/af80e05a-a611-46fd-8873-1e6712e20fe7 auto nosuid,nodev,nofail,x-gvfs-show 0 0
+#
+# /etc/fstab
+# Created by anaconda on Sat Apr 11 19:37:41 2026
+#
+# Accessible filesystems, by reference, are maintained under '/dev/disk/'.
+# See man pages fstab(5), findfs(8), mount(8) and/or blkid(8) for more info.
+#
+# After editing this file, run 'systemctl daemon-reload' to update systemd
+# units generated from this file.
+#
+UUID=b9b6a1ab-f8c3-43e1-80d2-39cd4e9360e9 /                       btrfs   subvol=root,compress=zstd:1 0 0
+UUID=c73f9a6f-ae6d-4d39-ad0b-ad6f8a810825 /boot                   ext4    defaults        1 2
+UUID=DBD2-331B          /boot/efi               vfat    umask=0077,shortname=winnt 0 2
+UUID=b9b6a1ab-f8c3-43e1-80d2-39cd4e9360e9 /home                   btrfs   subvol=home,compress=zstd:1 0 0
+
+#######
+10.0.0.9:/mnt/ssd/Handbreak       /mnt/handbreak nfs defaults,_netdev 0 0
+10.0.0.9:/mnt/nVME/apps/app-share       /mnt/app-share nfs defaults,_netdev 0 0
+#######
+10.0.0.9:/mnt/ssd/vm_data       /mnt/ssd nfs defaults,_netdev 0 0
+10.0.0.9:/mnt/nVME/4k       /mnt/4k nfs  defaults,_netdev  0  0
+10.0.0.9:/mnt/hdd/nfs       /mnt/hdd nfs  defaults,_netdev  0  0
+/dev/disk/by-uuid/0e15f735-facc-40a3-9453-fa1bd9856c47 /mnt/0e15f735-facc-40a3-9453-fa1bd9856c47 auto nosuid,nodev,nofail,x-gvfs-show 0 0
+#/dev/disk/by-uuid/9777f1da-d369-482b-b3dd-398c50c46dc7 /mnt/9777f1da-d369-482b-b3dd-398c50c46dc7 auto nosuid,nodev,nofail,x-gvfs-show 0 0
+#/dev/disk/by-uuid/af80e05a-a611-46fd-8873-1e6712e20fe7 /mnt/af80e05a-a611-46fd-8873-1e6712e20fe7 auto nosuid,nodev,nofail,x-gvfs-show 0 0
+#
+# /etc/fstab
+# Created by anaconda on Sat Apr 11 19:37:41 2026
+#
+# Accessible filesystems, by reference, are maintained under '/dev/disk/'.
+# See man pages fstab(5), findfs(8), mount(8) and/or blkid(8) for more info.
+#
+# After editing this file, run 'systemctl daemon-reload' to update systemd
+# units generated from this file.
+#
+UUID=b9b6a1ab-f8c3-43e1-80d2-39cd4e9360e9 /                       btrfs   subvol=root,compress=zstd:1 0 0
+UUID=c73f9a6f-ae6d-4d39-ad0b-ad6f8a810825 /boot                   ext4    defaults        1 2
+UUID=DBD2-331B          /boot/efi               vfat    umask=0077,shortname=winnt 0 2
+UUID=b9b6a1ab-f8c3-43e1-80d2-39cd4e9360e9 /home                   btrfs   subvol=home,compress=zstd:1 0 0
+
+#######
+10.0.0.9:/mnt/ssd/Handbreak       /mnt/handbreak nfs defaults,_netdev 0 0
+10.0.0.9:/mnt/nVME/apps/app-share       /mnt/app-share nfs defaults,_netdev 0 0
+#######
+10.0.0.9:/mnt/ssd/vm_data       /mnt/ssd nfs defaults,_netdev 0 0
+10.0.0.9:/mnt/nVME/4k       /mnt/4k nfs  defaults,_netdev  0  0
+10.0.0.9:/mnt/hdd/nfs       /mnt/hdd nfs  defaults,_netdev  0  0
+/dev/disk/by-uuid/0e15f735-facc-40a3-9453-fa1bd9856c47 /mnt/0e15f735-facc-40a3-9453-fa1bd9856c47 auto nosuid,nodev,nofail,x-gvfs-show 0 0
+#/dev/disk/by-uuid/9777f1da-d369-482b-b3dd-398c50c46dc7 /mnt/9777f1da-d369-482b-b3dd-398c50c46dc7 auto nosuid,nodev,nofail,x-gvfs-show 0 0
+#/dev/disk/by-uuid/af80e05a-a611-46fd-8873-1e6712e20fe7 /mnt/af80e05a-a611-46fd-8873-1e6712e20fe7 auto nosuid,nodev,nofail,x-gvfs-show 0 0
+#
+# /etc/fstab
+# Created by anaconda on Sat Apr 11 19:37:41 2026
+#
+# Accessible filesystems, by reference, are maintained under '/dev/disk/'.
+# See man pages fstab(5), findfs(8), mount(8) and/or blkid(8) for more info.
+#
+# After editing this file, run 'systemctl daemon-reload' to update systemd
+# units generated from this file.
+#
+UUID=b9b6a1ab-f8c3-43e1-80d2-39cd4e9360e9 /                       btrfs   subvol=root,compress=zstd:1 0 0
+UUID=c73f9a6f-ae6d-4d39-ad0b-ad6f8a810825 /boot                   ext4    defaults        1 2
+UUID=DBD2-331B          /boot/efi               vfat    umask=0077,shortname=winnt 0 2
+UUID=b9b6a1ab-f8c3-43e1-80d2-39cd4e9360e9 /home                   btrfs   subvol=home,compress=zstd:1 0 0
+
+#######
+10.0.0.9:/mnt/ssd/Handbreak       /mnt/handbreak nfs defaults,_netdev 0 0
+10.0.0.9:/mnt/nVME/apps/app-share       /mnt/app-share nfs defaults,_netdev 0 0
+#######
+10.0.0.9:/mnt/ssd/vm_data       /mnt/ssd nfs defaults,_netdev 0 0
+10.0.0.9:/mnt/nVME/4k       /mnt/4k nfs  defaults,_netdev  0  0
+10.0.0.9:/mnt/hdd/nfs       /mnt/hdd nfs  defaults,_netdev  0  0
+/dev/disk/by-uuid/0e15f735-facc-40a3-9453-fa1bd9856c47 /mnt/0e15f735-facc-40a3-9453-fa1bd9856c47 auto nosuid,nodev,nofail,x-gvfs-show 0 0
+#/dev/disk/by-uuid/9777f1da-d369-482b-b3dd-398c50c46dc7 /mnt/9777f1da-d369-482b-b3dd-398c50c46dc7 auto nosuid,nodev,nofail,x-gvfs-show 0 0
+#/dev/disk/by-uuid/af80e05a-a611-46fd-8873-1e6712e20fe7 /mnt/af80e05a-a611-46fd-8873-1e6712e20fe7 auto nosuid,nodev,nofail,x-gvfs-show 0 0
+#
+# /etc/fstab
+# Created by anaconda on Sat Apr 11 19:37:41 2026
+#
+# Accessible filesystems, by reference, are maintained under '/dev/disk/'.
+# See man pages fstab(5), findfs(8), mount(8) and/or blkid(8) for more info.
+#
+# After editing this file, run 'systemctl daemon-reload' to update systemd
+# units generated from this file.
+#
+UUID=b9b6a1ab-f8c3-43e1-80d2-39cd4e9360e9 /                       btrfs   subvol=root,compress=zstd:1 0 0
+UUID=c73f9a6f-ae6d-4d39-ad0b-ad6f8a810825 /boot                   ext4    defaults        1 2
+UUID=DBD2-331B          /boot/efi               vfat    umask=0077,shortname=winnt 0 2
+UUID=b9b6a1ab-f8c3-43e1-80d2-39cd4e9360e9 /home                   btrfs   subvol=home,compress=zstd:1 0 0
+
+#######
+10.0.0.9:/mnt/ssd/Handbreak       /mnt/handbreak nfs defaults,_netdev 0 0
+10.0.0.9:/mnt/nVME/apps/app-share       /mnt/app-share nfs defaults,_netdev 0 0
+#######
+10.0.0.9:/mnt/ssd/vm_data       /mnt/ssd nfs defaults,_netdev 0 0
+10.0.0.9:/mnt/nVME/4k       /mnt/4k nfs  defaults,_netdev  0  0
+10.0.0.9:/mnt/hdd/nfs       /mnt/hdd nfs  defaults,_netdev  0  0
+/dev/disk/by-uuid/0e15f735-facc-40a3-9453-fa1bd9856c47 /mnt/0e15f735-facc-40a3-9453-fa1bd9856c47 auto nosuid,nodev,nofail,x-gvfs-show 0 0
+#/dev/disk/by-uuid/9777f1da-d369-482b-b3dd-398c50c46dc7 /mnt/9777f1da-d369-482b-b3dd-398c50c46dc7 auto nosuid,nodev,nofail,x-gvfs-show 0 0
+#/dev/disk/by-uuid/af80e05a-a611-46fd-8873-1e6712e20fe7 /mnt/af80e05a-a611-46fd-8873-1e6712e20fe7 auto nosuid,nodev,nofail,x-gvfs-show 0 0
+#
+# /etc/fstab
+# Created by anaconda on Sat Apr 11 19:37:41 2026
+#
+# Accessible filesystems, by reference, are maintained under '/dev/disk/'.
+# See man pages fstab(5), findfs(8), mount(8) and/or blkid(8) for more info.
+#
+# After editing this file, run 'systemctl daemon-reload' to update systemd
+# units generated from this file.
+#
+UUID=b9b6a1ab-f8c3-43e1-80d2-39cd4e9360e9 /                       btrfs   subvol=root,compress=zstd:1 0 0
+UUID=c73f9a6f-ae6d-4d39-ad0b-ad6f8a810825 /boot                   ext4    defaults        1 2
+UUID=DBD2-331B          /boot/efi               vfat    umask=0077,shortname=winnt 0 2
+UUID=b9b6a1ab-f8c3-43e1-80d2-39cd4e9360e9 /home                   btrfs   subvol=home,compress=zstd:1 0 0
+
+#######
+10.0.0.9:/mnt/ssd/Handbreak       /mnt/handbreak nfs defaults,_netdev 0 0
+10.0.0.9:/mnt/nVME/apps/app-share       /mnt/app-share nfs defaults,_netdev 0 0
+#######
+10.0.0.9:/mnt/ssd/vm_data       /mnt/ssd nfs defaults,_netdev 0 0
+10.0.0.9:/mnt/nVME/4k       /mnt/4k nfs  defaults,_netdev  0  0
+10.0.0.9:/mnt/hdd/nfs       /mnt/hdd nfs  defaults,_netdev  0  0
+/dev/disk/by-uuid/0e15f735-facc-40a3-9453-fa1bd9856c47 /mnt/0e15f735-facc-40a3-9453-fa1bd9856c47 auto nosuid,nodev,nofail,x-gvfs-show 0 0
+#/dev/disk/by-uuid/9777f1da-d369-482b-b3dd-398c50c46dc7 /mnt/9777f1da-d369-482b-b3dd-398c50c46dc7 auto nosuid,nodev,nofail,x-gvfs-show 0 0
+#/dev/disk/by-uuid/af80e05a-a611-46fd-8873-1e6712e20fe7 /mnt/af80e05a-a611-46fd-8873-1e6712e20fe7 auto nosuid,nodev,nofail,x-gvfs-show 0 0
+#
+# /etc/fstab
+# Created by anaconda on Sat Apr 11 19:37:41 2026
+#
+# Accessible filesystems, by reference, are maintained under '/dev/disk/'.
+# See man pages fstab(5), findfs(8), mount(8) and/or blkid(8) for more info.
+#
+# After editing this file, run 'systemctl daemon-reload' to update systemd
+# units generated from this file.
+#
+UUID=b9b6a1ab-f8c3-43e1-80d2-39cd4e9360e9 /                       btrfs   subvol=root,compress=zstd:1 0 0
+UUID=c73f9a6f-ae6d-4d39-ad0b-ad6f8a810825 /boot                   ext4    defaults        1 2
+UUID=DBD2-331B          /boot/efi               vfat    umask=0077,shortname=winnt 0 2
+UUID=b9b6a1ab-f8c3-43e1-80d2-39cd4e9360e9 /home                   btrfs   subvol=home,compress=zstd:1 0 0
+
+#######
+10.0.0.9:/mnt/ssd/Handbreak       /mnt/handbreak nfs defaults,_netdev 0 0
+10.0.0.9:/mnt/nVME/apps/app-share       /mnt/app-share nfs defaults,_netdev 0 0
+#######
+10.0.0.9:/mnt/ssd/vm_data       /mnt/ssd nfs defaults,_netdev 0 0
+10.0.0.9:/mnt/nVME/4k       /mnt/4k nfs  defaults,_netdev  0  0
+10.0.0.9:/mnt/hdd/nfs       /mnt/hdd nfs  defaults,_netdev  0  0
+/dev/disk/by-uuid/0e15f735-facc-40a3-9453-fa1bd9856c47 /mnt/0e15f735-facc-40a3-9453-fa1bd9856c47 auto nosuid,nodev,nofail,x-gvfs-show 0 0
+#/dev/disk/by-uuid/9777f1da-d369-482b-b3dd-398c50c46dc7 /mnt/9777f1da-d369-482b-b3dd-398c50c46dc7 auto nosuid,nodev,nofail,x-gvfs-show 0 0
+#/dev/disk/by-uuid/af80e05a-a611-46fd-8873-1e6712e20fe7 /mnt/af80e05a-a611-46fd-8873-1e6712e20fe7 auto nosuid,nodev,nofail,x-gvfs-show 0 0

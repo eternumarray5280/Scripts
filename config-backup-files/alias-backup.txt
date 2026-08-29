@@ -1,0 +1,257 @@
+# .bashrc
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+    . /etc/bashrc
+fi
+
+# User specific environment
+if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]; then
+    PATH="$HOME/.local/bin:$HOME/bin:$PATH"
+fi
+export PATH
+
+# Uncomment the following line if you don't like systemctl's auto-paging feature:
+# export SYSTEMD_PAGER=
+
+# User specific aliases and functions
+if [ -d ~/.bashrc.d ]; then
+    for rc in ~/.bashrc.d/*; do
+        if [ -f "$rc" ]; then
+            . "$rc"
+        fi
+    done
+fi
+unset rc
+alias upload='/upload/vmdata_copy.sh'
+alias c='clear'
+##########SSH##########
+alias nas='ssh truenas_admin@172.16.0.10'
+alias pfsense='ssh admin@172.16.0.2'
+alias plex='ssh jt@10.0.0.10'
+alias backup='ssh jt@10.0.0.25'
+##########NAVIGATION##########
+alias handbreak='cd /mnt/handbreak ; l'
+alias backup-scripts='cd ~/Scripts/backup-scripts ; l'
+alias nfs='cd /srv/nfs ; ls'
+alias hdd='cd /mnt/hdd/ ; ls'
+alias scripts='cd ~/Scripts'
+alias torrents='cd /mnt/0e15f735-facc-40a3-9453-fa1bd9856c47 ; l'
+alias nvme='cd /mnt/91725d2a-71eb-46f3-b332-203f155c0ea8'
+alias media='cd /srv/nfs/Media/'
+alias tv='cd /srv/nfs/Media/TV/TV02'
+alias movies='cd /srv/nfs/Media/Movies/Movies02'
+alias 4k='cd /mnt/4k'
+alias n='cd /mnt/nfs'
+alias m='cd /mnt/media'
+alias s='cd ~/Software'
+alias h='cd ~/'
+alias d='cd ~/Documents'
+alias p='cd ~/Pictures'
+alias v='cd ~/Videos'
+alias dl='cd /srv/nfs/Media/Downloads'
+alias xfer='cd /srv/nfs/Media/Downloads/xfer'
+alias s='cd ~/Scripts ; l'
+alias up="cd .. ; l"
+alias l="ls -a -g --group-directories-first "
+##########OS & FILESYSTEM##########
+alias backup-alias='cat ~/.bashrc > ~/Scripts/config-backup-files/alias-backup.txt ; cd ~/Scripts/config-backup-files ; ls'
+alias backup-fstab='sudo cat /etc/fstab &>> ~/Scripts/config-backup-files/fstab-backup.txt ; cd ~/Scripts/config-backup-files ; ls'
+alias backup-configs='backup-alias ; backup-fstab ; cd ~/Scripts/backup-scripts ; ./home-scripts-backup.sh'
+alias filecount='ls -1 | wc -l'
+alias generate_ssh='ssh-keygen -t ed25519 -C "jaketemplin@gmail.com"'
+alias export_publickey='ssh-keygen -y -f ~/.ssh/id_rsa > ~/.ssh/id_rsa.pub ; echo "exported to ~/.ssh/id_rsa.pub"'
+alias freespace='df -h | grep /dev'
+alias mnt='cd /mnt ; l'
+alias showa='cat ~/.bashrc'
+alias edita='sudo nano ~/.bashrc'
+alias src='source ~/.bashrc'
+alias update='sudo dnf update -y ; flatpak update -y'
+alias shutdown='sudo shutdown +0'
+alias restart='sudo shutdown -r +0'
+alias mount='sudo systemctl daemon-reload ; sudo mount -a'
+alias unmount="sudo umount -a"
+alias fstab='sudo nano /etc/fstab'
+alias showf='sudo cat /etc/fstab'
+##########NETWORKING##########
+alias dns='nmcli dev show | grep DNS'
+alias gateway='nmcli dev show | grep IP4.GATEWAY'
+alias network='nmcli dev show | grep IP4.ADDRESS'
+alias ip='network ; gateway ; dns'
+alias fwdisable='sudo systemctl stop firewalld ; systemctl disable firewalld'
+alias fwstatus='sudo systemctl status firewalld'
+alias fwstart='sudo systemctl start firewalld'
+alias cpstart='sudo systemctl start cockpit'
+##########INSTALLATIONS##########
+alias instsnap='sudo dnf install snapd -y'
+alias instnano='sudo dnf install nano -y'
+alias instorion='sudo flatpak install com.ktechpit.orion -y'
+alias instsublime='sudo flatpak install com.sublimehq.SublimeText-y'
+alias instignition='sudo flatpak install io.github.flattool.Ignition -y'
+alias instvaults='sudo flatpak install io.github.mpobaschnig.Vaults -y'
+alias insterrands='sudo flatpak install io.github.mrvladus.List -y'
+alias instnetpeek='sudo flatpak install io.github.zingytomato.netpeek -y'
+alias instfloorp='sudo flatpak install one.ablaze.floorp -y'
+alias instvlc='sudo flatpak install org.videolan.VLCorg.videolan.VLC -y'
+alias instthunderbird='sudo dnf install thunderbird -y'
+alias instremmina='sudo dnf install remmina -y'
+alias instfilezilla='sudo dnf install filezilla -y'
+alias instsnap='sudo dnf install snapd -y'
+alias instflatpak='sudo dnf install flatpak -y;flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo>'
+alias instpkgmgrs='instsnap ; instflatpak'
+alias setupnew='dnfup;instpkgmgrs;update;makehomedirs;install'
+#example###########EXAMPLES & INFO##########
+alias showe='cat ~/.bashrc | grep example'
+#example####COUNT THE NUMBER OF FILES IN A DIRECTORY####
+#example##current dir
+#example##ls -1 | wc -l
+#example##recursive
+#example##find . -type f | wc -l
+#example MOVE FILES FROM SUBFOLDERS####
+#example ##find . -type f -exec mv -i {} . \;
+#example ##find . -depth -mindepth 1 -type d -empty -delete
+#example#####RCLONE####
+#example##rclone -P copy pcld:pub/rdy/mov /srv/nfs/Media/Movies/Movies01
+#example#####NFS MOUNT####
+#example##10.0.0.172:/mnt/WD_Mirror/nfs_wd      /mnt/nfs/wd  nfs  defaults,_netdev  0  0
+#example#####NEW HOSTNAME####
+#example##sudo hostnamectl set-hostname your-new-hostname
+#example#####STATIC IP####
+#example##sudo nmcli connection modify "<connection_name>" ipv4.addresses 192.168.1.100/24
+#example##sudo nmcli connection modify "<connection_name>" ipv4.gateway 192.168.1.1
+#example##sudo nmcli connection modify "<connection_name>" ipv4.dns "8.8.8.8,8.8.4.4"
+#example##sudo nmcli connection modify "<connection_name>" ipv4.method manual
+#example##sudo nmcli connection down "<connection_name>" && sudo nmcli connection up "<connection_name>"
+#example#####SEND PUBLIC SSH KEY####
+#example##ssh-copy-id jt@10.0.0.10
+#example#####Z####
+#example#####Z####
+# .bashrc
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+    . /etc/bashrc
+fi
+
+# User specific environment
+if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]; then
+    PATH="$HOME/.local/bin:$HOME/bin:$PATH"
+fi
+export PATH
+
+# Uncomment the following line if you don't like systemctl's auto-paging feature:
+# export SYSTEMD_PAGER=
+
+# User specific aliases and functions
+if [ -d ~/.bashrc.d ]; then
+    for rc in ~/.bashrc.d/*; do
+        if [ -f "$rc" ]; then
+            . "$rc"
+        fi
+    done
+fi
+unset rc
+alias upload='/upload/vmdata_copy.sh'
+alias c='clear'
+##########SSH##########
+alias nas='ssh truenas_admin@172.16.0.10'
+alias pfsense='ssh admin@172.16.0.2'
+alias plex='ssh jt@10.0.0.10'
+alias backup='ssh jt@10.0.0.25'
+##########NAVIGATION##########
+alias handbreak='cd /mnt/handbreak ; l'
+alias backup-scripts='cd ~/Scripts/backup-scripts ; l'
+alias nfs='cd /srv/nfs ; ls'
+alias hdd='cd /mnt/hdd/ ; ls'
+alias scripts='cd ~/Scripts'
+alias torrents='cd /mnt/0e15f735-facc-40a3-9453-fa1bd9856c47 ; l'
+alias nvme='cd /mnt/91725d2a-71eb-46f3-b332-203f155c0ea8'
+alias media='cd /srv/nfs/Media/'
+alias tv='cd /srv/nfs/Media/TV/TV02'
+alias movies='cd /srv/nfs/Media/Movies/Movies02'
+alias 4k='cd /mnt/4k'
+alias n='cd /mnt/nfs'
+alias m='cd /mnt/media'
+alias s='cd ~/Software'
+alias h='cd ~/'
+alias d='cd ~/Documents'
+alias p='cd ~/Pictures'
+alias v='cd ~/Videos'
+alias dl='cd /srv/nfs/Media/Downloads'
+alias xfer='cd /srv/nfs/Media/Downloads/xfer'
+alias s='cd ~/Scripts ; l'
+alias up="cd .. ; l"
+alias l="ls -a -g --group-directories-first "
+##########OS & FILESYSTEM##########
+alias backup-alias='cat ~/.bashrc > ~/Scripts/config-backup-files/alias-backup.txt ; cd ~/Scripts/config-backup-files ; ls'
+alias backup-fstab='sudo cat /etc/fstab &>> ~/Scripts/config-backup-files/fstab-backup.txt ; cd ~/Scripts/config-backup-files ; ls'
+alias backup-configs='backup-alias ; backup-fstab ; cd ~/Scripts/backup-scripts ; ./home-scripts-backup.sh'
+alias filecount='ls -1 | wc -l'
+alias generate_ssh='ssh-keygen -t ed25519 -C "jaketemplin@gmail.com"'
+alias export_publickey='ssh-keygen -y -f ~/.ssh/id_rsa > ~/.ssh/id_rsa.pub ; echo "exported to ~/.ssh/id_rsa.pub"'
+alias freespace='df -h | grep /dev'
+alias mnt='cd /mnt ; l'
+alias showa='cat ~/.bashrc'
+alias edita='sudo nano ~/.bashrc'
+alias src='source ~/.bashrc'
+alias update='sudo dnf update -y ; flatpak update -y'
+alias shutdown='sudo shutdown +0'
+alias restart='sudo shutdown -r +0'
+alias mount='sudo systemctl daemon-reload ; sudo mount -a'
+alias unmount="sudo umount -a"
+alias fstab='sudo nano /etc/fstab'
+alias showf='sudo cat /etc/fstab'
+##########NETWORKING##########
+alias dns='nmcli dev show | grep DNS'
+alias gateway='nmcli dev show | grep IP4.GATEWAY'
+alias network='nmcli dev show | grep IP4.ADDRESS'
+alias ip='network ; gateway ; dns'
+alias fwdisable='sudo systemctl stop firewalld ; systemctl disable firewalld'
+alias fwstatus='sudo systemctl status firewalld'
+alias fwstart='sudo systemctl start firewalld'
+alias cpstart='sudo systemctl start cockpit'
+##########INSTALLATIONS##########
+alias instsnap='sudo dnf install snapd -y'
+alias instnano='sudo dnf install nano -y'
+alias instorion='sudo flatpak install com.ktechpit.orion -y'
+alias instsublime='sudo flatpak install com.sublimehq.SublimeText-y'
+alias instignition='sudo flatpak install io.github.flattool.Ignition -y'
+alias instvaults='sudo flatpak install io.github.mpobaschnig.Vaults -y'
+alias insterrands='sudo flatpak install io.github.mrvladus.List -y'
+alias instnetpeek='sudo flatpak install io.github.zingytomato.netpeek -y'
+alias instfloorp='sudo flatpak install one.ablaze.floorp -y'
+alias instvlc='sudo flatpak install org.videolan.VLCorg.videolan.VLC -y'
+alias instthunderbird='sudo dnf install thunderbird -y'
+alias instremmina='sudo dnf install remmina -y'
+alias instfilezilla='sudo dnf install filezilla -y'
+alias instsnap='sudo dnf install snapd -y'
+alias instflatpak='sudo dnf install flatpak -y;flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo>'
+alias instpkgmgrs='instsnap ; instflatpak'
+alias setupnew='dnfup;instpkgmgrs;update;makehomedirs;install'
+#example###########EXAMPLES & INFO##########
+alias showe='cat ~/.bashrc | grep example'
+#example####COUNT THE NUMBER OF FILES IN A DIRECTORY####
+#example##current dir
+#example##ls -1 | wc -l
+#example##recursive
+#example##find . -type f | wc -l
+#example MOVE FILES FROM SUBFOLDERS####
+#example ##find . -type f -exec mv -i {} . \;
+#example ##find . -depth -mindepth 1 -type d -empty -delete
+#example#####RCLONE####
+#example##rclone -P copy pcld:pub/rdy/mov /srv/nfs/Media/Movies/Movies01
+#example#####NFS MOUNT####
+#example##10.0.0.172:/mnt/WD_Mirror/nfs_wd      /mnt/nfs/wd  nfs  defaults,_netdev  0  0
+#example#####NEW HOSTNAME####
+#example##sudo hostnamectl set-hostname your-new-hostname
+#example#####STATIC IP####
+#example##sudo nmcli connection modify "<connection_name>" ipv4.addresses 192.168.1.100/24
+#example##sudo nmcli connection modify "<connection_name>" ipv4.gateway 192.168.1.1
+#example##sudo nmcli connection modify "<connection_name>" ipv4.dns "8.8.8.8,8.8.4.4"
+#example##sudo nmcli connection modify "<connection_name>" ipv4.method manual
+#example##sudo nmcli connection down "<connection_name>" && sudo nmcli connection up "<connection_name>"
+#example#####SEND PUBLIC SSH KEY####
+#example##ssh-copy-id jt@10.0.0.10
+#example#####Z####
+#example#####Z####
+cat: ///: Is a directory
